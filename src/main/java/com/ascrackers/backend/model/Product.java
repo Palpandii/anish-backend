@@ -30,6 +30,9 @@ public class Product {
     // YouTube video id or full link for this product's demo video
     private String youtubeId;
 
+    @Column(name = "in_stock", nullable = false)
+    private Boolean inStock = true;
+
     public Product() {}
 
     // ---- getters and setters ----
@@ -59,4 +62,7 @@ public class Product {
 
     public String getYoutubeId() { return youtubeId; }
     public void setYoutubeId(String youtubeId) { this.youtubeId = youtubeId; }
+
+    public Boolean getInStock() { return inStock; }
+    public void setInStock(Boolean inStock) { this.inStock = inStock; }
 }

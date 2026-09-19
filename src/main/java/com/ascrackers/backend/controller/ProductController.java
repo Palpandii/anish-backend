@@ -47,6 +47,22 @@ public class ProductController {
             existing.setPrice(updated.getPrice());
             existing.setImage(updated.getImage());
             existing.setYoutubeId(updated.getYoutubeId());
+            if (updated.getInStock() != null) {
+                existing.setInStock(updated.getInStock());
+            }
+            return ResponseEntity.ok(repo.save(existing));
+        }).orElse(ResponseEntity.notFound().build());
+    }
+
+    // Admin-protected - lightweight toggle, doesn't need the full product payload
+    @PatchMapping("/{id}/stock")
+    public ResponseEntity<Product> updateStock(@PathVariable Long id, @RequestBody java.util.Map<String, Boolean> body) {
+        Boolean inStock = body.get("inStock");
+        if (inStock == null) {
+            return ResponseEntity.badRequest().build();
+        }
+        return repo.findById(id).map(existing -> {
+            existing.setInStock(inStock);
             return ResponseEntity.ok(repo.save(existing));
         }).orElse(ResponseEntity.notFound().build());
     }
