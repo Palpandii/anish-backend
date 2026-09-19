@@ -30,6 +30,11 @@ public class Product {
     // YouTube video id or full link for this product's demo video
     private String youtubeId;
 
+    // Video uploaded straight from the admin's phone/computer (Cloudinary URL).
+    // A product can have this, a YouTube link, both, or neither.
+    @Column(length = 1000)
+    private String videoUrl;
+
     @Column(name = "in_stock", nullable = false)
     private Boolean inStock = true;
 
@@ -62,6 +67,9 @@ public class Product {
 
     public String getYoutubeId() { return youtubeId; }
     public void setYoutubeId(String youtubeId) { this.youtubeId = youtubeId; }
+
+    public String getVideoUrl() { return videoUrl; }
+    public void setVideoUrl(String videoUrl) { this.videoUrl = videoUrl; }
 
     public Boolean getInStock() { return inStock; }
     public void setInStock(Boolean inStock) { this.inStock = inStock; }

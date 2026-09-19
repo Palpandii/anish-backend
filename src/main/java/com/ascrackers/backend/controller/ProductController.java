@@ -47,6 +47,7 @@ public class ProductController {
             existing.setPrice(updated.getPrice());
             existing.setImage(updated.getImage());
             existing.setYoutubeId(updated.getYoutubeId());
+            existing.setVideoUrl(updated.getVideoUrl());
             if (updated.getInStock() != null) {
                 existing.setInStock(updated.getInStock());
             }
