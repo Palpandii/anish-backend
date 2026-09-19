@@ -29,19 +29,24 @@ public class AdminAuthFilter extends OncePerRequestFilter {
         String method = request.getMethod();
 
         boolean isLoginEndpoint = path.equals("/api/admin/login");
-        // These paths carry customer PII (name/phone/address) or internal business/finance
-        // data — they must NEVER be reachable by a plain GET without the admin token, even
-        // though most other GETs (products, categories, banners) are public storefront data.
+        // These paths carry customer PII (name/phone/address) or business data —
+        // they must NEVER be reachable by a plain GET without the admin token,
+        // even though most other GETs (products, categories, banners) are public
+        // storefront data.
+        // Phase 3: payments, admin-users and estimate-requests carry the same kind
+        // of PII/business data, so they join the same allowlist.
         boolean isAdminOnlyPath = path.startsWith("/api/orders") || path.startsWith("/api/estimates")
-                || path.startsWith("/api/customers") || path.startsWith("/api/expenses")
-                || path.startsWith("/api/purchases") || path.startsWith("/api/taxes");
+                || path.startsWith("/api/customers") || path.startsWith("/api/payments")
+                || path.startsWith("/api/admin-users") || path.startsWith("/api/estimate-requests");
         boolean isPublicGet = "GET".equalsIgnoreCase(method) && path.startsWith("/api/") && !isAdminOnlyPath;
         boolean isPreflight = "OPTIONS".equalsIgnoreCase(method);
-        // Customers place orders from the storefront without logging in
+        // Customers place orders from the storefront without logging in — the
+        // "get a free estimate" form works the same way.
         boolean isPublicOrderCreate = "POST".equalsIgnoreCase(method) && path.equals("/api/orders");
+        boolean isPublicEstimateRequestCreate = "POST".equalsIgnoreCase(method) && path.equals("/api/estimate-requests");
 
         boolean needsAuth = path.startsWith("/api/") && !isLoginEndpoint && !isPublicGet
-                && !isPreflight && !isPublicOrderCreate;
+                && !isPreflight && !isPublicOrderCreate && !isPublicEstimateRequestCreate;
 
         if (needsAuth) {
             String authHeader = request.getHeader("Authorization");
