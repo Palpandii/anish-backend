@@ -10,11 +10,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-/**
- * Protects write operations (POST/PUT/DELETE) under /api/**
- * Public GET endpoints (like fetching products for the storefront) stay open.
- * The admin login endpoint itself is always open.
- */
 @Component
 public class AdminAuthFilter extends OncePerRequestFilter {
 
@@ -29,9 +24,10 @@ public class AdminAuthFilter extends OncePerRequestFilter {
         String method = request.getMethod();
 
         boolean isLoginEndpoint = path.equals("/api/admin/login");
-        boolean isPublicGet = "GET".equalsIgnoreCase(method) && path.startsWith("/api/");
+        boolean isAdminOnlyPath = path.startsWith("/api/orders") || path.startsWith("/api/estimates")
+                || path.startsWith("/api/customers");
+        boolean isPublicGet = "GET".equalsIgnoreCase(method) && path.startsWith("/api/") && !isAdminOnlyPath;
         boolean isPreflight = "OPTIONS".equalsIgnoreCase(method);
-        // Customers place orders from the storefront without logging in
         boolean isPublicOrderCreate = "POST".equalsIgnoreCase(method) && path.equals("/api/orders");
 
         boolean needsAuth = path.startsWith("/api/") && !isLoginEndpoint && !isPublicGet
