@@ -35,7 +35,7 @@ public class PdfService {
             document.add(heading);
             document.add(new Paragraph("Sivakasi Wholesale & Retail - Fancy Crackers, Sparklers & Gift Boxes", normalFont));
             document.add(new Paragraph("3/149-1 Sivakamipuram, Sattur Main Road, Sivakasi, Virudhunagar, Tamil Nadu - 626189", normalFont));
-            document.add(new Paragraph("Dharma: 7448981688  |  Kali: 8270247706", normalFont));
+            document.add(new Paragraph("Dharma: 7448981688  | 9787503426, 8270247706", normalFont));
             document.add(new Paragraph(" "));
 
             document.add(new Paragraph(title + " #" + docId, boldFont));
