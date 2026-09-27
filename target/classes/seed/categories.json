@@ -1,0 +1,104 @@
+[
+  {
+    "id": "single-sound",
+    "nameEn": "Single Sound Crackers",
+    "nameTa": "தனி சத்து வெடிகள்",
+    "image": "/images/categories/single-sound.jpg"
+  },
+  {
+    "id": "flower-pots",
+    "nameEn": "Flower Pots",
+    "nameTa": "பூச்சட்டி",
+    "image": "/images/categories/flower-pots.jpg"
+  },
+  {
+    "id": "ground-spinners",
+    "nameEn": "Ground Spinners",
+    "nameTa": "தரை சுழல் வெடிகள்",
+    "image": "/images/categories/ground-spinners.jpg"
+  },
+  {
+    "id": "bombs",
+    "nameEn": "Bombs",
+    "nameTa": "பாம்ப் வெடிகள்",
+    "image": "/images/categories/bombs.jpg"
+  },
+  {
+    "id": "bijili-crackers",
+    "nameEn": "Bijili Crackers",
+    "nameTa": "பிஜிலி வெடிகள்",
+    "image": "/images/categories/bijili-crackers.jpg"
+  },
+  {
+    "id": "rockets",
+    "nameEn": "Rockets",
+    "nameTa": "ராக்கெட்",
+    "image": "/images/categories/rockets.jpg"
+  },
+  {
+    "id": "twinkling-star",
+    "nameEn": "Twinkling Star",
+    "nameTa": "மின்னும் நட்சத்திரம்",
+    "image": "/images/categories/twinkling-star.jpg"
+  },
+  {
+    "id": "fountains-siren",
+    "nameEn": "Fountains & Siren",
+    "nameTa": "நீரூற்று & சைரன்",
+    "image": "/images/categories/fountains-siren.jpg"
+  },
+  {
+    "id": "peacock",
+    "nameEn": "Peacock",
+    "nameTa": "மயில்",
+    "image": "/images/categories/peacock.jpg"
+  },
+  {
+    "id": "children-special",
+    "nameEn": "Children Special",
+    "nameTa": "குழந்தைகள் சிறப்பு",
+    "image": "/images/categories/children-special.jpg"
+  },
+  {
+    "id": "single-shot-fancy",
+    "nameEn": "5 Varieties (Single Shot)",
+    "nameTa": "சிங்கிள் ஷாட் ஃபேன்சி",
+    "image": "/images/categories/single-shot-fancy.jpg"
+  },
+  {
+    "id": "multicolour-shots",
+    "nameEn": "Repeating Multicolour Shots",
+    "nameTa": "பல வண்ண ஷாட்",
+    "image": "/images/categories/multicolour-shots.jpg"
+  },
+  {
+    "id": "festival-crackers",
+    "nameEn": "Festival Crackers",
+    "nameTa": "திருவிழா வெடிகள்",
+    "image": "/images/categories/festival-crackers.jpg"
+  },
+  {
+    "id": "sparklers",
+    "nameEn": "Sparklers",
+    "nameTa": "மத்தாப்பு",
+    "image": "/images/categories/sparklers.jpg"
+  },
+  {
+    "id": "diwali-new-varieties",
+    "nameEn": "Diwali Special New Varieties",
+    "nameTa": "தீபாவளி புதிய வகைகள்",
+    "image": "/images/categories/diwali-new-varieties.jpg"
+  },
+  {
+    "id": "colour-match-boxes",
+    "nameEn": "Colour Match Boxes",
+    "nameTa": "கலர் மேட்ச் பாக்ஸ்",
+    "image": "/images/categories/colour-match-boxes.jpg"
+  },
+  {
+    "id": "gift-boxes",
+    "nameEn": "Gift Boxes",
+    "nameTa": "பரிசுப் பெட்டிகள்",
+    "image": "/images/categories/gift-boxes.jpg"
+  }
+]

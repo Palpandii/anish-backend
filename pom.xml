@@ -14,8 +14,8 @@
   <groupId>com.ascrackers</groupId>
   <artifactId>backend</artifactId>
   <version>1.0.0</version>
-  <name>as-crackers-backend</name>
-  <description>AS Crackers admin backend (Spring Boot + MySQL)</description>
+  <name>anish-crackers-backend</name>
+  <description>Anish Crackers admin backend (Spring Boot + MySQL)</description>
 
   <properties>
     <java.version>21</java.version>

@@ -22,7 +22,7 @@ public class CloudinaryService {
         Map<?, ?> uploadResult = cloudinary.uploader().upload(
                 file.getBytes(),
                 ObjectUtils.asMap(
-                        "folder", "gayathiripyrotech",
+                        "folder", "anishcrackers",
                         "public_id", publicId,
                         "resource_type", "auto"
                 )

@@ -31,7 +31,7 @@ public class PdfService {
             Font normalFont = new Font(Font.HELVETICA, 11);
             Font boldFont = new Font(Font.HELVETICA, 11, Font.BOLD);
 
-            Paragraph heading = new Paragraph("Gayathiri Pyrotech", titleFont);
+            Paragraph heading = new Paragraph("Anish Crackers", titleFont);
             document.add(heading);
             document.add(new Paragraph("Sivakasi Wholesale & Retail - Fancy Crackers, Sparklers & Gift Boxes", normalFont));
             document.add(new Paragraph("3/149-1 Sivakamipuram, Sattur Main Road, Sivakasi, Virudhunagar, Tamil Nadu - 626189", normalFont));
@@ -73,7 +73,7 @@ public class PdfService {
             document.add(totalPara);
 
             document.add(new Paragraph(" "));
-            document.add(new Paragraph("Thank you for choosing Gayathiri Pyrotech - Spread Light, the Sivakasi Way.", normalFont));
+            document.add(new Paragraph("Thank you for choosing Anish Crackers - Best Quality & Price, the Sivakasi Way.", normalFont));
 
             document.close();
             return out.toByteArray();
