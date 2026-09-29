@@ -49,4 +49,15 @@ public class OrderController {
             return ResponseEntity.ok(repo.save(order));
         }).orElse(ResponseEntity.notFound().build());
     }
+
+    // Admin deletes an order (its line items are removed too via cascade).
+    // Token check for DELETE /api/orders/** is handled by AdminAuthFilter.
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        if (!repo.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+        repo.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
 }
